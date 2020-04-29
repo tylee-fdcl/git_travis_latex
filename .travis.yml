@@ -7,9 +7,11 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: D4iAa6r67j0zw70ViipKpv88wVYb65KSBqqjcK+AFcN/EKhD0EkQGi8H3bN94l8ws+m3ev7/sFZwwgbprDsM+S/3TFYN5tV4Vb6ZdjKUbbi2z37x2/CGfnTURz4VYa4zD0ccHeb9vJzEQ/6t+OHBrQFfhlALKsS7eI4v3vYpNOroOLR+RcN1UDuuiPXa/VzbHOLWK2c7fIDz9KCwfsp4OXjsQP7vrKT8c4gwxLgD25sw/bO1HPPYfWIqibMv1M0bt1Ss6jD1TBuFBv/tGTMSYO77yKx1k6YMP2OZu69TEdLcEmHvI9Wk3+CEZWslsvhvv6wNV1MxsnZ/caLJt0CTlpOQ74DOaViqnIsTglFhJhPObCFdJK8FJsTl5ORLS2khO2nK/cKY2Tcv+vI9VbZttEO4k3KxkNzSuq/sGepBQoiCMrCSjI5mFZYrcw4vuBzbtr23uZyVzOl0lMdvKkOi9zTDBtY7Jfdd4Seo8djzGQzrVWc3DHPBsiXIaBKA/HA8SdzXXcYPKQcMWz+ug42nxyzfkitOeImxi4ay+wLmdAPV1bnVG4NxfeO9G3xcrHXWT3EGDQ7nTy2yH+M+69rOvY+dMgPhombiP6EzfeYowsWvQ8a81fjH/Shokg/NyHPld9feoFV/4dnOoeeoQCGS+4LxZMItaTRF8imQ3QXEbtw=
-  file: "./tmp.pdf"
-  on:
-    repo: tylee-fdcl/git_travis_latex_tmp
+      secure: D4iAa6r67j0zw70ViipKpv88wVYb65KSBqqjcK+AFcN/EKhD0EkQGi8H3bN94l8ws+m3ev7/sFZwwgbprDsM+S/3TFYN5tV4Vb6ZdjKUbbi2z37x2/CGfnTURz4VYa4zD0ccHeb9vJzEQ/6t+OHBrQFfhlALKsS7eI4v3vYpNOroOLR+RcN1UDuuiPXa/VzbHOLWK2c7fIDz9KCwfsp4OXjsQP7vrKT8c4gwxLgD25sw/bO1HPPYfWIqibMv1M0bt1Ss6jD1TBuFBv/tGTMSYO77yKx1k6YMP2OZu69TEdLcEmHvI9Wk3+CEZWslsvhvv6wNV1MxsnZ/caLJt0CTlpOQ74DOaViqnIsTglFhJhPObCFdJK8FJsTl5ORLS2khO2nK/cKY2Tcv+vI9VbZttEO4k3KxkNzSuq/sGepBQoiCMrCSjI5mFZYrcw4vuBzbtr23uZyVzOl0lMdvKkOi9zTDBtY7Jfdd4Seo8djzGQzrVWc3DHPBsiXIaBKA/HA8SdzXXcYPKQcMWz+ug42nxyzfkitOeImxi4ay+wLmdAPV1bnVG4NxfeO9G3xcrHXWT3EGDQ7nTy2yH+M+69rOvY+dMgPhombiP6EzfeYowsWvQ8a81fjH/Shokg/NyHPld9feoFV/4dnOoeeoQCGS+4LxZMItaTRF8imQ3QXEbtw=
+file: 
+- ./src/tmp.pdf
+- ./tmp.pdf
+skip_cleanup: true
+on:
     tags: true
     branch: master
