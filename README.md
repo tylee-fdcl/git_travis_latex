@@ -54,6 +54,7 @@ We will add a configuration to the `.travis.yml` such that a pdf will be automat
 ```
 * Commit and push (this does not copy pdf to Github)
 * If you are ready to release, just tag and push.
-```git tag v0.01
+```
+   git tag v0.01
    git push origin v0.01
 '''
