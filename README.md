@@ -1,6 +1,6 @@
-# git_travis_latex_tmp
+# git_travis_latex
 
-https://github.com/PHPirates/travis-ci-latex-pdf
+Automatic latex complie and release following: https://github.com/PHPirates/travis-ci-latex-pdf
 
 ## 1. Docker image with Tectonic
 
@@ -20,7 +20,6 @@ Docker provides the ability to download a pre-installed Tectonic and then run it
 
 Build time example file: two minutes
 
-Want this? Instructions [below](#tectonic-docker).
 
 ## <a name="tectonic-docker">Instructions for building with Docker and Tectonic</a>
 
@@ -48,8 +47,7 @@ We will add a configuration to the `.travis.yml` such that a pdf will be automat
 * Replace everything below your encryped api key with (changing the path to your pdf file, probably the same folder as your tex file is in)
 ```yml
   file: 
-  - ./src/nameofmytexfile.pdf
-  - ./otherfile.pdf
+  - ./nameofmytexfile.pdf
   skip_cleanup: true
   on:
     tags: true
