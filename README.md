@@ -46,11 +46,15 @@ We will add a configuration to the `.travis.yml` such that a pdf will be automat
 * Replace everything below your encryped api key with (changing the path to your pdf file, probably the same folder as your tex file is in)
 ```yml
   file: 
-  - ./nameofmytexfile.pdf
+  - "./nameofmytexfile.pdf"
   skip_cleanup: true
   on:
     tags: true
     branch: master
 ```
-* Commit and push.
+* Commit and push (this does not copy pdf to Github)
 * If you are ready to release, just tag and push.
+```
+   git tag v0.01
+   git push origin v0.01
+'''
