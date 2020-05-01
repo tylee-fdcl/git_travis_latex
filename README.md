@@ -28,14 +28,14 @@ Build time example file: two minutes
 ### For every new project
 
 * Create `.travis.yml` with the following contents:
-* 
+
 ```yml
-sudo: required
-language: generic
-services: docker
-script:
-- docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
-  /bin/sh -c "tectonic main.tex"
+  sudo: required
+  language: generic
+  services: docker
+  script:
+  - docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
+    /bin/sh -c "tectonic main.tex"
 ```
 
 * In the above example, the name of latex file to be compiled is `main.tex`, which can be changed if needed.
@@ -50,8 +50,8 @@ script:
 
 ### For every new project
 * Run `travis login --pro --github-token mytoken` where `mytoken` is a token from https://github.com/settings/tokens (or leave the `--github-token` flag out if you want to use your password). 
-* Run `travis setup releases --pro` and leave File to Upload empty. This step updates `.travis.yml` generated above.
-* This step updates `.travis.yml` generated above. Replace everything below your encryped api key with
+* Run `travis setup releases --pro` and leave File to Upload empty.
+* The above step updates `.travis.yml`. Replace everything below your encryped api key with
 
 ```yml
   file: 
